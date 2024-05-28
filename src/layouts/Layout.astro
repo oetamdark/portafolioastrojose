@@ -1,0 +1,35 @@
+---
+import Header from "../components/general/Header.astro";
+import Footer from "../components/general/Footer.astro";
+
+interface Props {
+  title: string;
+  mainclass: string;
+}
+
+const { title, mainclass } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+	  <script src="https://kit.fontawesome.com/f31270f82b.js" crossorigin="anonymous"></script>
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body id={mainclass} class={mainclass}>
+    <Header />
+    <slot />
+  </body>
+  <Footer />
+  <script src="../assets/js/main.js"></script>
+</html>

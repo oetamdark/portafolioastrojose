@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import myPhoto from "../assets/about-me.jpg";
+---
+
+<section id="about-me" class="about-me ">
+  <h2 class="about-me__title">Get To Know More <span>About Me</span></h2>
+  <article class="about-me__container wrapper">
+    <figure class="about-me__imagen">
+      <Image src={myPhoto} alt="My Photo" />
+    </figure>
+    <div class="about-me__text">
+      <p>
+        Hello, I'm Jose Luis, a passionate Telecommunications Engineer with a
+        keen interest in leveraging technology to solve complex problems.
+        Currently, I thrive in the dynamic realm of DevOps engineering, where I
+        orchestrate seamless integration between development and operations to
+        drive efficiency and reliability in software delivery pipelines. With a
+        solid foundation in telecommunications coupled with my expertise in
+        DevOps methodologies, I bring a unique perspective to every project I
+        undertake. I am dedicated to continuous learning and innovation, always
+        seeking opportunities to enhance processes and optimize performance.
+        Explore my portfolio to discover more about my journey and the projects
+        I've been involved in.
+      </p>
+    </div>
+  </article>
+
+  <article class="about-me__columns wrapper">
+    <div class="about-me__column">
+      <i class="fa-solid fa-medal"></i>
+      <h3>Experience</h3>
+      <p><strong>4+ years</strong> AWS Engineer</p>
+    </div>
+    <div class="about-me__column">
+      <i class="fa-solid fa-user-group"></i>
+      <h3>Education</h3>
+      <p>
+        B.Sc. Bachelors Degree on <strong
+          >Telecommunications Engineering
+        </strong>
+      </p>
+      <p>M.Sc. Masters Degree on <strong>Information Security</strong></p>
+    </div>
+  </article>
+</section>
+
+<style lang="scss">
+  .about-me {
+    &__title {
+      font-size: 2.8rem;
+      text-align: center;
+      font-weight: 200;
+      margin: 1.5rem 0 6rem;
+      span{
+        font-size: 4.8rem;
+        display: block;
+      }
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8rem;
+    }
+    &__imagen {
+      width: 40%;
+      img {
+        box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.6);
+        border-radius: 2rem;
+      }
+    }
+    &__text {
+      width: 60%;
+      p {
+        font-size: 2.6rem;
+        line-height: 1.5;
+      }
+    }
+    &__columns {
+      width: Min(90%, 145rem);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 5rem;
+      margin-bottom: 5rem;
+    }
+    &__column {
+      margin-top: 8rem;
+      padding: 5rem;
+      width: 50%;
+      align-self: stretch;
+      text-align: center;
+      border: 1px solid var(--secondary-color);
+      border-radius: 1rem;
+      box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.6);
+      i {
+        font-size: 3.5rem;
+        color: var(--secondary-color);
+      }
+      h3 {
+        font-size: 4rem;
+        margin: 3rem 0;
+      }
+      p {
+        margin-bottom: 4rem;
+        font-size: 2.8rem;
+        strong {
+          display: block;
+          font-size: 3.2rem;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+</style>

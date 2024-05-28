@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+import myPhoto from "../assets/jltc-profile-pic.png";
+---
+
+<section id="top-content" class="top-content">
+  <article class="top-content__container wrapper">
+    <figure class="top-content__imagen">
+      <Image src={myPhoto} alt="My cv" />
+    </figure>
+    <div class="top-content__text">
+      <h1 class="top-content__title">
+        Hello, I'm <span> José Luis</span>
+      </h1>
+      <h2 class="top-content__subtitle">DevOps Engineer</h2>
+      <div class="top-content__cta">
+        <a href="#" class="btn">Download CV</a>
+        <a href="#" class="btn-atl">Contact Info</a>
+      </div>
+      <ul class="top-content__sociallist">
+        <li class="top-content__socialitem">
+          <a
+            href="https://www.linkedin.com/in/luistellezk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li class="top-content__socialitem">
+          <a
+            href="https://github.com/luistellezk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<style lang="scss">
+  .top-content {
+    margin: 10rem 0;
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__imagen {
+      max-width: 35vw;
+      margin: 0;
+    }
+
+    &__text {
+      text-align: center;
+      padding: 4rem;
+      margin-right: 10%;
+    }
+
+    &__title {
+      font-size: 2.8rem;
+      color: var(--secondary-color);
+      span {
+        font-size: 4.8rem;
+        color: var(--third-color);
+        display: block;
+        margin: 1rem 0;
+      }
+    }
+
+    &__cta {
+      margin: 2.5rem 0;
+      .btn {
+        margin-right: 1rem;
+      }
+    }
+
+    &__sociallist {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      justify-content: center;
+    }
+    &__socialitem {
+      .fa-brands {
+        color: var(--secondary-color);
+        font-size: 3.5rem;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          opacity: 0.7;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+</style>

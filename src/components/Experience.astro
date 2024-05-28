@@ -1,0 +1,98 @@
+<section id="experience" class="experience">
+  <h2 class="experience__title"><span>Explore</span> My Experience</h2>
+  <article class="experience__container wrapper">
+    <div class="experience__left">
+      <h3 class="experience__subtitle">DevOps</h3>
+      <ul class="experience__list">
+        <li>AWS <span>Experienced</span></li>
+        <li>Azure <span>Basic</span></li>
+        <li>GitLab <span>Basic</span></li>
+        <li>Python <span>Basic</span></li>
+        <li>SQL <span>Experienced</span></li>
+        <li>Docker <span>Basic</span></li>
+      </ul>
+    </div>
+    <div class="experience__right">
+      <h3 class="experience__subtitle">IT</h3>
+      <ul class="experience__list">
+        <li>Windows <span>Experienced</span></li>
+        <li>Linux <span>Intermediate</span></li>
+        <li>MacOs <span>Intermediate</span></li>
+        <li>Networking <span>Experienced</span></li>
+      </ul>
+    </div>
+  </article>
+</section>
+<style lang="scss">
+  .experience {
+    margin: 10rem 0;
+    &__container {
+      width: Min(90%, 145rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+    }
+    &__left,
+    &__right {
+      margin-top: 3rem;
+      padding: 5rem;
+      width: 50%;
+      align-self: stretch;
+      text-align: center;
+      border: 1px solid var(--secondary-color);
+      border-radius: 1rem;
+      box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.6);
+    }
+
+    &__title {
+      font-size: 2.8rem;
+      text-align: center;
+      font-weight: 200;
+      margin: 1.5rem 0 4rem;
+      span {
+        font-size: 4.8rem;
+        display: block;
+      }
+    }
+    &__subtitle {
+      font-size: 4rem;
+      margin-top: 0;
+    }
+    &__list {
+      list-style: none;
+      padding: 0;
+      max-width: 50rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      li {
+        width: calc(50% - 8rem);
+        font-size: 2.8rem;
+        font-weight: bold;
+        margin: 1rem 0 2rem;
+        padding-left: 4rem;
+        text-align: left;
+        position: relative;
+        &::before {
+          content: "\f058";
+          font-family: "Font Awesome 6 Free";
+          font-size: 2.5rem;
+          width: 2rem;
+          height: 2rem;
+          position: absolute;
+          top: 0.5rem;
+          left: 0;
+        }
+        span {
+          font-size: 2.4rem;
+          font-weight: 200;
+          display: block;
+        }
+      }
+    }
+  }
+</style>

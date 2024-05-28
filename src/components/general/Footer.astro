@@ -1,0 +1,100 @@
+<footer id="footer" class="footer">
+  <h2 class="footer__title">Get in Touch <span>Contact Me</span></h2>
+  <div class="footer__links animate-fade top">
+    <a
+      href="mailto:luistellez@ieee.org"
+      target="_blank"
+      class="footer__link link-middle"
+      ><i class="fa-solid fa-envelope"></i> luistellez@ieee.org</a
+    >
+    <a
+      href="https://www.linkedin.com/in/luistellezk/"
+      target="_blank"
+      class="footer__link link-middle"
+    >
+      <i class="fa-brands fa-linkedin-in"></i> LinkedIn</a
+    >
+  </div>
+  <nav class="footer__nav">
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a href="#about-me" class="link-middle" data-scroll>About</a>
+      </li>
+      <li class="footer__item">
+        <a href="#experience" class="link-middle" data-scroll>Experience</a>
+      </li>
+      <li class="footer__item">
+        <a href="/" class="link-middle">Projects</a>
+      </li>
+      <li class="footer__item">
+        <a href="#footer" class="link-middle" data-scroll>Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <p class="footer__copyright">
+    Copyright © <span data-year></span> Luis Téllez Kuartas. All Rights Reserved.
+  </p>
+</footer>
+<script>
+  const year = new Date().getFullYear().toString();
+  const yearElement = document.querySelector("[data-year]");
+  yearElement.textContent = year;
+</script>
+
+<style lang="scss">
+  .footer {
+    padding-top: 5rem;
+    text-align: center;
+    &__title {
+      font-size: 2.8rem;
+      text-align: center;
+      margin: 1.5rem 0 6rem;
+      font-weight: 200;
+      span {
+        font-size: 4.8rem;
+        font-weight: bold;
+        display: block;
+      }
+    }
+    &__links {
+      display: inline-block;
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid var(--secondary-color);
+      a {
+        font-size: 1.8rem;
+        color: var(--secondary-color);
+      }
+    }
+    &__link {
+      font-size: 2rem;
+      position: relative;
+      margin-left: 1.5rem;
+    }
+
+    &__nav {
+      margin-top: 5rem;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &__item {
+      font-size: 1.5rem;
+      a {
+        font-size: 2rem;
+        text-decoration: none;
+        color: var(--black);
+      }
+    }
+    &__copyright {
+      font-size: 1.3rem;
+      margin: 5rem 0 3rem;
+    }
+  }
+</style>
